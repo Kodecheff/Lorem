@@ -35,18 +35,23 @@
 </head>
 <body>
   <!-- <div class=""> -->
-    <div class="nav-bar container-fluid">
+    <header class="container-fluid">
       <h3 class="logo">Lorem</h3>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li><a href="#about">About</a></li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </div>
+      
+      <div class="dropdown">
+        <nav>
+          <div onclick="dropdown()" class="dropbtn">&#9776;</div>
 
-    <div class="slider">
+          <ul id="myDropdown" class="dropdown_content">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="home" class="slider">
       <h1>Lorem foods</h1>
       <p>A taste for the buds</p>
     </div>
@@ -118,6 +123,6 @@
     </footer>
   <!-- </div> -->
 
-  <script src="/js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

@@ -2,26 +2,52 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Pathway Gothic One';
+  font-family: 'Pathway Gothic One','Courgette', 'Baloo Tamma 2', 'Oswald';
 }
+html{
+  scroll-behavior: smooth;
+}
+
 html.sr .load-hidden, html.sr .card{
   visibility: hidden;
 }
 
-.nav-bar{
+header{
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  margin-top: 0;
 }
-.nav-bar h3{
+header h3{
   margin-left: 50px;
 }
-.nav-bar nav ul{
+header nav ul{
   list-style: none;
   display: flex;
 }
-.nav-bar nav ul li {
+header nav ul li {
   margin-right: 50px;
+}
+header li a{
+  color: black;
+  text-decoration: none;
+}
+header li a:hover {
+  color: rgb(53, 52, 52);
+  border-bottom: 2px solid goldenrod;
+  text-decoration: none;
+}
+.active{
+  color: rgb(53, 52, 52);
+  border-bottom: 2px solid goldenrod;
+}
+.dropbtn{
+  display: none;
 }
 
 .slider{
@@ -102,7 +128,7 @@ html.sr .load-hidden, html.sr .card{
   flex-grow: 1;
 }
 .about .image{
-  flex-shrink: 3;
+  flex-shrink: 100;
 }
 
 
@@ -112,9 +138,35 @@ footer{
   border-top: 1px solid rgb(168, 167, 167);
 }
 
-/* 
+
 @media screen and (max-width: 768px){
-  .nav-bar nav ul{
-    display: none;
+  header h3{
+    margin-left: 20px;
   }
-} */
+  .dropbtn{
+    display: block;
+    font-size: 26px;
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown_content{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #f1f1f1;
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 6px 6px;
+  }
+  .dropdown_content li{
+    margin-top: 9px;
+  }
+  .show{display: block;}
+  .service .card{
+    flex-basis: 280px;
+  }
+}
